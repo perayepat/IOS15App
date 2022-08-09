@@ -16,10 +16,10 @@ struct ContentView: View {
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 26, height: 26)
-                .cornerRadius(20)
+                .cornerRadius(10)
                 .padding(9)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .strokeStyle()
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .strokeStyle(cornerRaius: 10)
                 
             Text("SwiftUI for IOS 15")
                 .font(.largeTitle)
@@ -66,6 +66,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .preferredColorScheme(.dark)
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }

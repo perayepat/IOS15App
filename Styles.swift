@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct StrokeStyle: ViewModifier {
+    var cornerRadius: CGFloat
+    ///This allows us to use the apps setting to alter our features
+    @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {
         content
             .overlay(
-                RoundedRectangle(cornerRadius: 30, style: .continuous)
-                    .stroke(.linearGradient(colors: [.white.opacity(0.9), .black.opacity(0.1)], startPoint: .top, endPoint: .bottom))
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(.linearGradient(colors: [
+                        .white.opacity(colorScheme == .dark ?  0.6 : 0.3),
+                        .black.opacity(colorScheme == .dark ?  0.3 : 0.1)],startPoint: .top, endPoint: .bottom))
                     .blendMode(.overlay)
-                
             )
-            
     }
 }
 /// Allows us to use the dot notation of the stroke style
 extension View {
-    func strokeStyle() -> some View{
-        modifier(StrokeStyle())
+    func strokeStyle(cornerRaius: CGFloat = 30) -> some View{
+        modifier(StrokeStyle(cornerRadius: cornerRaius))
     }
 }
