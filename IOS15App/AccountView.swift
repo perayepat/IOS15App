@@ -48,9 +48,16 @@ struct profile: View {
                 .background(
                     Image(systemName: "hexagon")
                         .symbolVariant(.fill)
-                        .foregroundColor(.blue)
+                        .foregroundStyle(Color(hex: "dee2ff"))
                         .font(.system(size: 200))
                         .offset(x: -50, y: -100)
+                        .rotationEffect(Angle.degrees(10))
+                        
+                )
+                .background(
+                    BlobView()
+                        .offset(x: 200, y: 0)
+                        .scaleEffect(0.6)
                 )
             Text("Pat")
                 .font(.title)
