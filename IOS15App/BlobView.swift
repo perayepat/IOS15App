@@ -14,6 +14,7 @@ import SwiftUI
 struct BlobView: View {
     @State var appear = false
     
+    
     var body: some View {
         TimelineView(.animation){ timeline in
             let now = timeline.date.timeIntervalSinceReferenceDate
@@ -25,7 +26,7 @@ struct BlobView: View {
             
             Canvas{ context , size in
                 context.fill(path(in: CGRect(x: 0, y: 0, width: size.width, height: size.height), x: x, x2: x2), with:
-                        .linearGradient(Gradient(colors: [.red,.purple]), startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 300, y: 100))
+                        .linearGradient(Gradient(colors: [Color(hex: "ffd6a5"),Color(hex: "ffc6ff")]), startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 300, y: 100))
                 )
             }
             .frame(width: 400, height: 414)
