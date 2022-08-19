@@ -16,6 +16,7 @@
 		43B925B828A2BF1D00460280 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B925B728A2BF1D00460280 /* AccountView.swift */; };
 		43B925BA28A2D0E500460280 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B925B928A2D0E500460280 /* BlobView.swift */; };
 		43D6835A28AFF903003B6511 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6835928AFF903003B6511 /* TabBar.swift */; };
+		43D6835C28AFFF37003B6511 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6835B28AFFF37003B6511 /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		43B925B728A2BF1D00460280 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		43B925B928A2D0E500460280 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
 		43D6835928AFF903003B6511 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		43D6835B28AFFF37003B6511 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,6 @@
 		43B9257D28A2565300460280 = {
 			isa = PBXGroup;
 			children = (
-				43B925B528A29DD700460280 /* Styles.swift */,
 				43B9258828A2565300460280 /* IOS15App */,
 				43B9258728A2565300460280 /* Products */,
 			);
@@ -97,6 +98,8 @@
 		43B9258828A2565300460280 /* IOS15App */ = {
 			isa = PBXGroup;
 			children = (
+				43D6835B28AFFF37003B6511 /* Tab.swift */,
+				43B925B528A29DD700460280 /* Styles.swift */,
 				43B9258928A2565300460280 /* IOS15AppApp.swift */,
 				43B9258B28A2565300460280 /* ContentView.swift */,
 				43D6835928AFF903003B6511 /* TabBar.swift */,
@@ -250,6 +253,7 @@
 				43B9258C28A2565300460280 /* ContentView.swift in Sources */,
 				43B925B428A28EA900460280 /* Extensions.swift in Sources */,
 				43B9258A28A2565300460280 /* IOS15AppApp.swift in Sources */,
+				43D6835C28AFFF37003B6511 /* Tab.swift in Sources */,
 				43B925B628A29DD700460280 /* Styles.swift in Sources */,
 				43B925B828A2BF1D00460280 /* AccountView.swift in Sources */,
 				43B925BA28A2D0E500460280 /* BlobView.swift in Sources */,
