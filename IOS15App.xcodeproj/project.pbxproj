@@ -21,6 +21,7 @@
 		43D6836528B174AF003B6511 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836428B174AF003B6511 /* FeaturedItem.swift */; };
 		43D6836728B175DA003B6511 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836628B175DA003B6511 /* NavigationBar.swift */; };
 		43D6836928B17B3C003B6511 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836828B17B3C003B6511 /* PreferenceKeys.swift */; };
+		43D6836B28B17F21003B6511 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		43D6836428B174AF003B6511 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		43D6836628B175DA003B6511 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		43D6836828B17B3C003B6511 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
+		43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				43B925B328A28EA900460280 /* Extensions.swift */,
 				43B925B528A29DD700460280 /* Styles.swift */,
+				43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				43D6836528B174AF003B6511 /* FeaturedItem.swift in Sources */,
 				43D6836928B17B3C003B6511 /* PreferenceKeys.swift in Sources */,
 				43D6835A28AFF903003B6511 /* TabBar.swift in Sources */,
+				43D6836B28B17F21003B6511 /* AnimatableFontModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
