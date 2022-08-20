@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabBar: View {
     @State var selectedTab:Tab = .home
+    @State var color: Color = Color(hex: "a0c4ff")
     
     var body: some View {
         //aligning to the bottom
@@ -32,7 +33,11 @@ struct TabBar: View {
                 Spacer()
                 ForEach(tabItems) { item in
                     Button{
-                        selectedTab = item.tab
+                        //MARK: - Tab bar button animation
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)){
+                            selectedTab = item.tab
+                            color = item.color
+                        }
                     } label: {
                         VStack(spacing:0){
                             Image(systemName: item.icon)
@@ -46,6 +51,7 @@ struct TabBar: View {
                         .frame(maxWidth: .infinity)
                     }
                     .foregroundStyle(selectedTab == item.tab ? .primary: .secondary)
+                    .blendMode(selectedTab == item.tab ? .overlay : .normal)
                     ///Consistent spacing and aligned tab tiems
                 }
             }
@@ -53,10 +59,60 @@ struct TabBar: View {
             .padding(.horizontal,8)
             .padding(.top,14)
             .frame(height: 88, alignment: .top)
+            //MARK: - Background effect
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
+            .background(
+                HStack {
+                    if selectedTab == .library {Spacer()}
+                    if selectedTab == .explore {Spacer()}
+                    if selectedTab == .notifications{
+                        Spacer()
+                        Spacer()
+                    }
+                    //MARK: - Background Circle
+                    Circle()
+                        .fill(color)
+                        .frame(width: 88)
+                    if selectedTab == .home{Spacer()}
+                    if selectedTab == .explore{
+                        Spacer()
+                        Spacer()
+                    }
+                    if selectedTab == .notifications{Spacer()}
+    
+                }
+                    .padding(.horizontal,8)
+            )
+            //MARK: - Top bar effect
+                .overlay(
+                    HStack {
+                        if selectedTab == .library {Spacer()}
+                        if selectedTab == .explore {Spacer()}
+                        if selectedTab == .notifications{
+                            Spacer()
+                            Spacer()
+                        }
+                        //MARK: - Background Circle
+                        Rectangle()
+                            .fill(color)
+                            .frame(width: 28, height: 5)
+                            .cornerRadius(3)
+                            .frame(width: 123)
+                            .frame(maxHeight: .infinity, alignment: .top)
+                        if selectedTab == .home{Spacer()}
+                        if selectedTab == .explore{
+                            Spacer()
+                            Spacer()
+                        }
+                        if selectedTab == .notifications{Spacer()}
+        
+                    }
+                )
             .strokeStyle(cornerRaius: 34)
             .frame(maxHeight:.infinity,alignment: .bottom) ///allows the fame to take the max height and set it to the bottom
             .ignoresSafeArea()
+           
+            
             
         }
     }
