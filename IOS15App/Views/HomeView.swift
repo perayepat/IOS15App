@@ -41,8 +41,7 @@ struct HomeView: View {
         //MARK: - Custom Navbar
         ///overlay gives us a sticky navbar
         .overlay(
-            NavigationBar(title: "Featured")
-                .opacity(hasScrolled ? 1 : 0)
+            NavigationBar(title: "Featured",hasScrolled: $hasScrolled)
         )
     }
 }
