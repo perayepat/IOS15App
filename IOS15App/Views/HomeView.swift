@@ -11,7 +11,14 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             FeaturedItem()
+            Color.clear
+                .frame(height: 1000)
         }
+        .safeAreaInset(edge: .top, content: {
+            ///Creating our own safe area for custom items 
+            Color.clear
+                .frame(height: 70)
+        })
         //MARK: - Custom Navbar
         ///overlay gives us a sticky navbar
         .overlay(
