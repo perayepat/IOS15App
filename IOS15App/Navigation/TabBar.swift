@@ -8,51 +8,31 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State var selectedTab:Tab = .home
+    @AppStorage("selectedTab") var selectedTab:Tab = .home
     @State var color: Color = Color(hex: "a0c4ff")
     @State var tabItemWidth: CGFloat = .zero
     
     var body: some View {
-        //aligning to the bottom
-        ZStack(alignment: .bottom) {
-            
-            Group{
-                switch selectedTab {
-                case .home:
-                    ContentView()
-                case .explore:
-                    Text("Explore")
-                case .notifications:
-                    Text("Notifications")
-                case .library:
-                    AccountView()
-                }
-            }
-            .frame(maxWidth:.infinity, maxHeight: .infinity)
-            
-            HStack {
-                Buttons
-            }
-            ///Tab Bar background and customisation
-            .padding(.horizontal,8)
-            .padding(.top,14)
-            .frame(height: 88, alignment: .top)
-            //MARK: - Background effect
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
-            .background(
-                background
-            )
-            //MARK: - Top bar effect
-                .overlay(
-                    overlay
-                )
-            .strokeStyle(cornerRaius: 34)
-            .frame(maxHeight:.infinity,alignment: .bottom) ///allows the fame to take the max height and set it to the bottom
-            .ignoresSafeArea()
-           
-            
-            
+        
+        HStack {
+            Buttons
         }
+        ///Tab Bar background and customisation
+        .padding(.horizontal,8)
+        .padding(.top,14)
+        .frame(height: 88, alignment: .top)
+        //MARK: - Background effect
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
+        .background(
+            background
+        )
+        //MARK: - Top bar effect
+            .overlay(
+                overlay
+            )
+        .strokeStyle(cornerRaius: 34)
+        .frame(maxHeight:.infinity,alignment: .bottom) ///allows the fame to take the max height and set it to the bottom
+        .ignoresSafeArea()
     }
     var Buttons: some View{
         ForEach(tabItems) { item in

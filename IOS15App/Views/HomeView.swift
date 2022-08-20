@@ -1,14 +1,13 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  IOS15App
 //
-//  Created by Pat on 2022/08/09.
+//  Created by Pat on 2022/08/20.
 //
-/// 1. The background has a` in:` modifier allowing applying shapes and masks
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack(alignment: .leading ,spacing: 8) {
             Spacer()
@@ -59,14 +58,11 @@ struct ContentView: View {
                 .offset(x: 32, y: -80)
         )
     
-        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-//        ContentView()
-//            .preferredColorScheme(.dark)
+        HomeView()
     }
 }
