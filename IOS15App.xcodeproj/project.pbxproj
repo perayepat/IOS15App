@@ -22,6 +22,7 @@
 		43D6836728B175DA003B6511 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836628B175DA003B6511 /* NavigationBar.swift */; };
 		43D6836928B17B3C003B6511 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836828B17B3C003B6511 /* PreferenceKeys.swift */; };
 		43D6836B28B17F21003B6511 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */; };
+		43D6836D28B182B3003B6511 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836C28B182B3003B6511 /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		43D6836628B175DA003B6511 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		43D6836828B17B3C003B6511 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
+		43D6836C28B182B3003B6511 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				43D6835B28AFFF37003B6511 /* Tab.swift */,
 				43D6836828B17B3C003B6511 /* PreferenceKeys.swift */,
+				43D6836C28B182B3003B6511 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				43D6836728B175DA003B6511 /* NavigationBar.swift in Sources */,
 				43B925B628A29DD700460280 /* Styles.swift in Sources */,
 				43B925B828A2BF1D00460280 /* AccountView.swift in Sources */,
+				43D6836D28B182B3003B6511 /* Course.swift in Sources */,
 				43B925BA28A2D0E500460280 /* BlobView.swift in Sources */,
 				43D6836528B174AF003B6511 /* FeaturedItem.swift in Sources */,
 				43D6836928B17B3C003B6511 /* PreferenceKeys.swift in Sources */,
