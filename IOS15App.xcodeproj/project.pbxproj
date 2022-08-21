@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		436276FB28B245600096E740 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436276FA28B245600096E740 /* CourseItem.swift */; };
+		436276FD28B246420096E740 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436276FC28B246420096E740 /* CourseView.swift */; };
 		43B9258A28A2565300460280 /* IOS15AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9258928A2565300460280 /* IOS15AppApp.swift */; };
 		43B9258C28A2565300460280 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9258B28A2565300460280 /* ContentView.swift */; };
 		43B9258E28A2565500460280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B9258D28A2565500460280 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		436276FA28B245600096E740 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		436276FC28B246420096E740 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		43B9258628A2565300460280 /* Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B9258928A2565300460280 /* IOS15AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS15AppApp.swift; sourceTree = "<group>"; };
 		43B9258B28A2565300460280 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			children = (
 				43B925B928A2D0E500460280 /* BlobView.swift */,
 				43D6836428B174AF003B6511 /* FeaturedItem.swift */,
+				436276FA28B245600096E740 /* CourseItem.swift */,
+				436276FC28B246420096E740 /* CourseView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			files = (
 				43D6835E28B128A8003B6511 /* HomeView.swift in Sources */,
 				43B9258C28A2565300460280 /* ContentView.swift in Sources */,
+				436276FD28B246420096E740 /* CourseView.swift in Sources */,
 				43B925B428A28EA900460280 /* Extensions.swift in Sources */,
 				43B9258A28A2565300460280 /* IOS15AppApp.swift in Sources */,
 				43D6836F28B211E4003B6511 /* MatchedView.swift in Sources */,
@@ -322,6 +329,7 @@
 				43B925B828A2BF1D00460280 /* AccountView.swift in Sources */,
 				43D6836D28B182B3003B6511 /* Course.swift in Sources */,
 				43B925BA28A2D0E500460280 /* BlobView.swift in Sources */,
+				436276FB28B245600096E740 /* CourseItem.swift in Sources */,
 				43D6836528B174AF003B6511 /* FeaturedItem.swift in Sources */,
 				43D6836928B17B3C003B6511 /* PreferenceKeys.swift in Sources */,
 				43D6835A28AFF903003B6511 /* TabBar.swift in Sources */,

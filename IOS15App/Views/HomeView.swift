@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State var hasScrolled:Bool = false
+    @Namespace var namespace
+    @State var show = false
     
     var body: some View {
         ZStack {
@@ -17,11 +19,26 @@ struct HomeView: View {
             
             ScrollView {
                 scrollDetection
+                
                 featured
-                Color.clear.frame(height: 1000)
+                
+                Text("Courses".uppercased())
+                    .font(.footnote.bold())
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                
+                if !show{
+                CourseItem(namespace: namespace, show: $show)
+                        .onTapGesture {
+                            withAnimation(.spring(response: 0.7, dampingFraction: 0.7, blendDuration: 0)){
+                                show.toggle()
+                            }
+                        }
+                }
             }
             .coordinateSpace(name: "scroll")
-          
+            
             .safeAreaInset(edge: .top, content: {
                 ///Creating our own safe area for custom items
                 Color.clear
@@ -31,15 +48,20 @@ struct HomeView: View {
             ///overlay gives us a sticky navbar
             .overlay(
                 NavigationBar(title: "Featured",hasScrolled: $hasScrolled)
-        )
+            )
+            //MARK: - Mathced Geometry full screen
+            if show{
+            CourseView(namespace: namespace, show: $show)
+                
+            }
         }
     }
     
     var scrollDetection: some View{
         //MARK: - Scroll view detection
         GeometryReader{ proxy in
-         ///Testing values using the coordinate space of the scroll view
-//                Text("\(proxy.frame(in: .named("scroll")).minY)")
+            ///Testing values using the coordinate space of the scroll view
+            //                Text("\(proxy.frame(in: .named("scroll")).minY)")
             Color.clear
                 .preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
         }
@@ -77,7 +99,7 @@ struct HomeView: View {
                                 .offset(x: 32, y: -80)
                                 .offset(x: minX / 2)
                                 .blur(radius: abs(minX / 80))
-                    )
+                        )
                 }
             }
         }
@@ -88,7 +110,7 @@ struct HomeView: View {
                 .offset(x: 250, y: -100 )
         )
         
-
+        
     }
 }
 
