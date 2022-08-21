@@ -23,6 +23,7 @@
 		43D6836928B17B3C003B6511 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836828B17B3C003B6511 /* PreferenceKeys.swift */; };
 		43D6836B28B17F21003B6511 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */; };
 		43D6836D28B182B3003B6511 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836C28B182B3003B6511 /* Course.swift */; };
+		43D6836F28B211E4003B6511 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6836E28B211E4003B6511 /* MatchedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		43D6836828B17B3C003B6511 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		43D6836A28B17F21003B6511 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		43D6836C28B182B3003B6511 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		43D6836E28B211E4003B6511 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				43D6835D28B128A8003B6511 /* HomeView.swift */,
 				43B925B728A2BF1D00460280 /* AccountView.swift */,
+				43D6836E28B211E4003B6511 /* MatchedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				43B9258C28A2565300460280 /* ContentView.swift in Sources */,
 				43B925B428A28EA900460280 /* Extensions.swift in Sources */,
 				43B9258A28A2565300460280 /* IOS15AppApp.swift in Sources */,
+				43D6836F28B211E4003B6511 /* MatchedView.swift in Sources */,
 				43D6835C28AFFF37003B6511 /* Tab.swift in Sources */,
 				43D6836728B175DA003B6511 /* NavigationBar.swift in Sources */,
 				43B925B628A29DD700460280 /* Styles.swift in Sources */,

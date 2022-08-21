@@ -21,15 +21,7 @@ struct HomeView: View {
                 Color.clear.frame(height: 1000)
             }
             .coordinateSpace(name: "scroll")
-            .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-                withAnimation(.easeInOut) {
-                    if value < 0 {
-                        hasScrolled = true
-                    }else{
-                        hasScrolled = false
-                    }
-                }
-            })
+          
             .safeAreaInset(edge: .top, content: {
                 ///Creating our own safe area for custom items
                 Color.clear
@@ -52,6 +44,15 @@ struct HomeView: View {
                 .preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
         }
         .frame(height: 0)
+        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+            withAnimation(.easeInOut) {
+                if value < 0 {
+                    hasScrolled = true
+                }else{
+                    hasScrolled = false
+                }
+            }
+        })
     }
     
     var featured: some View{
