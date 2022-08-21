@@ -12,7 +12,7 @@ struct IOS15AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .statusBar(hidden: true)
+//                .statusBar(hidden: true)
         }
     }
 }

@@ -20,24 +20,27 @@ struct CourseView: View {
             .background(Color("Background"))
             .ignoresSafeArea()
             
-            Button {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)){
-                    show.toggle()
-                }
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.body.weight(.bold))
-                    .foregroundColor(.secondary)
-                    .padding(8)
-                    .background(.ultraThinMaterial, in: Circle())
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-            .padding(20)
-            .padding(.top)
-            .ignoresSafeArea()
+            button
         }
     }
 
+    var button: some View{
+        Button {
+            withAnimation(.cloaseCard){
+                show.toggle()
+            }
+        } label: {
+            Image(systemName: "xmark")
+                .font(.body.weight(.bold))
+                .foregroundColor(.secondary)
+                .padding(8)
+                .background(.ultraThinMaterial, in: Circle())
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+        .padding(20)
+        .padding(.top)
+        .ignoresSafeArea()
+    }
     
     var cover: some View{
         VStack{

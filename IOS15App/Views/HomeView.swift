@@ -11,6 +11,7 @@ struct HomeView: View {
     @State var hasScrolled:Bool = false
     @Namespace var namespace
     @State var show = false
+    @State var showStatusBar = true
     
     var body: some View {
         ZStack {
@@ -31,8 +32,9 @@ struct HomeView: View {
                 if !show{
                 CourseItem(namespace: namespace, show: $show)
                         .onTapGesture {
-                            withAnimation(.spring(response: 0.7, dampingFraction: 0.7, blendDuration: 0)){
+                            withAnimation(.openCard){
                                 show.toggle()
+                                showStatusBar = false
                             }
                         }
                 }
@@ -52,7 +54,16 @@ struct HomeView: View {
             //MARK: - Mathced Geometry full screen
             if show{
             CourseView(namespace: namespace, show: $show)
-                
+            }
+        }
+        .statusBar(hidden: !showStatusBar)
+        .onChange(of: show) { newValue in
+            withAnimation(.cloaseCard){
+                if newValue {
+                    showStatusBar = false
+                } else{
+                    showStatusBar = true
+                }
             }
         }
     }
