@@ -30,13 +30,16 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                 
                 if !show{
-                CourseItem(namespace: namespace, show: $show)
-                        .onTapGesture {
-                        withAnimation(.openCard){
-                                show.toggle()
-                                showStatusBar = false
+                    ForEach(courses) { course in
+                        CourseItem(namespace: namespace,course: course ,show: $show)
+                            .onTapGesture {
+                                withAnimation(.openCard){
+                                    show.toggle()
+                                    showStatusBar = false
+                                    
+                                }
                             }
-                        }
+                    }
                 }
             }
             .coordinateSpace(name: "scroll")
@@ -53,9 +56,11 @@ struct HomeView: View {
             )
             //MARK: - Mathced Geometry full screen
             if show{
-            CourseView(namespace: namespace, show: $show)
-                    .zIndex(1)
-                    .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+                ForEach(courses) { course in
+                    CourseView(namespace: namespace, course: course ,show: $show)
+                        .zIndex(1)
+                        .transition(.asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)), removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+                }
             }
         }
         .statusBar(hidden: !showStatusBar)
@@ -93,7 +98,7 @@ struct HomeView: View {
     var featured: some View{
         //MARK: - Custom Horizontal Scroll
         TabView {
-            ForEach(courses) { course in
+            ForEach(featuredCourses) { course in
                 GeometryReader { proxy in
                     let minX  = proxy.frame(in: .global).minX
                     

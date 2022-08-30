@@ -155,6 +155,7 @@
 				43B925B728A2BF1D00460280 /* AccountView.swift */,
 				43D6836E28B211E4003B6511 /* MatchedView.swift */,
 				436276FC28B246420096E740 /* CourseView.swift */,
+				436276FA28B245600096E740 /* CourseItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 			children = (
 				43B925B928A2D0E500460280 /* BlobView.swift */,
 				43D6836428B174AF003B6511 /* FeaturedItem.swift */,
-				436276FA28B245600096E740 /* CourseItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
